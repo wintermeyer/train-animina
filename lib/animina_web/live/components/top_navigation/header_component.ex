@@ -47,16 +47,6 @@ defmodule AniminaWeb.HeaderComponent do
                       </button>
                     </div>
 
-                    <!--
-                      Dropdown menu, show/hide based on menu state.
-
-                      Entering: ""
-                        From: ""
-                        To: ""
-                      Leaving: "transition ease-in duration-75"
-                        From: "transform opacity-100 scale-100"
-                        To: "transform opacity-0 scale-95"
-                    -->
                     <div x-show="open" x-description="Profile dropdown panel, show/hide based on dropdown state." x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="origin-top-right z-40 absolute -right-2 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5" role="menu" aria-orientation="vertical" aria-labelledby="user-menu" style="display: none;">
                       <!-- LiveDashboard -->
                       <%= if function_exported?(Routes, :live_dashboard_path, 2) && @current_user && @current_user.username == "wintermeyer" do %>
@@ -110,28 +100,7 @@ defmodule AniminaWeb.HeaderComponent do
 
         <!-- Mobile menu, show/hide based on mobile menu state. -->
         <div class="lg:hidden" x-show="mobileMenuShow">
-          <!--
-            Mobile menu overlay, show/hide based on mobile menu state.
-
-            Entering: "duration-150 ease-out"
-              From: "opacity-0"
-              To: "opacity-100"
-            Leaving: "duration-150 ease-in"
-              From: "opacity-100"
-              To: "opacity-0"
-          -->
           <div class="z-20 fixed inset-0 bg-black bg-opacity-25" aria-hidden="true"></div>
-
-          <!--
-            Mobile menu, show/hide based on mobile menu state.
-
-            Entering: "duration-150 ease-out"
-              From: "opacity-0 scale-95"
-              To: "opacity-100 scale-100"
-            Leaving: "duration-150 ease-in"
-              From: "opacity-100 scale-100"
-              To: "opacity-0 scale-95"
-          -->
           <div class="z-30 absolute top-0 inset-x-0 max-w-3xl mx-auto w-full p-2 transition transform origin-top" x-on:click.away="mobileMenuShow = false">
             <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y divide-gray-200">
               <div class="pt-3 pb-2">
@@ -151,6 +120,35 @@ defmodule AniminaWeb.HeaderComponent do
                   </div>
                 </div>
               </div>
+              <%= if @current_user do %>
+              <%= with_locale(@locale, fn -> %>
+
+                <div class="pt-4 pb-2">
+                  <div class="flex items-center px-5">
+                    <div class="flex-shrink-0">
+                      <img class="h-10 w-10 rounded-full" src="<%= UserHelper.avatar_src(@current_user) %>" alt="Avatar">
+                    </div>
+                    <div class="ml-3 min-w-0 flex-1">
+                      <div class="text-base font-medium text-gray-800 truncate">@<%= @current_user.username %></div>
+                      <div class="text-sm font-medium text-gray-500 truncate"><%= gettext("Points") %>: <%= Formater.humanize_number(@current_user.points) %></div>
+                    </div>
+                  </div>
+                  <div class="mt-3 px-2 space-y-1">
+                    <%= link gettext("Settings"), to: Routes.user_settings_path(@socket, :edit), class: "block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800" %>
+                    <%= link gettext("Log out"), to: Routes.user_session_path(@socket, :delete), method: :delete, class: "block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800" %>
+                  </div>
+                </div>
+                <% end) %>
+              <% else %>
+                <div class="pt-4 pb-2">
+                  <div class="mt-3 px-2 space-y-1">
+                    <%= with_locale(@locale, fn -> %>
+                      <%= link gettext("Register"), to: Routes.user_registration_path(@socket, :new), class: "block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800" %>
+                      <%= link gettext("Log in"), to: Routes.user_session_path(@socket, :new), class: "block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800" %>
+                    <% end) %>
+                  </div>
+                </div>
+              <% end %>
             </div>
           </div>
         </div>
