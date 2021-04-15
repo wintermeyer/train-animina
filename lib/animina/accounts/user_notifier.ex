@@ -10,7 +10,7 @@ defmodule Animina.Accounts.UserNotifier do
   defp deliver(user, subject, body) do
     new()
     |> to({"#{user.first_name} #{user.last_name}", user.email})
-    |> from({"Stefan Wintermeyer", "sw@wintermeyer-consulting.ee"})
+    |> from({"Stefan Wintermeyer", "sw@wintermeyer-consulting.de"})
     |> subject(subject)
     |> text_body(body)
     |> Animina.Mailer.deliver()
