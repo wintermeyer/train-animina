@@ -1,0 +1,173 @@
+<main class="-mt-24 pb-8">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <h1 class="sr-only"><%= gettext "Register" %></h1>
+    <!-- Main 3 column grid -->
+    <div class="grid grid-cols-1 gap-4 items-start lg:grid-cols-3 lg:gap-8">
+      <!-- Left column -->
+      <div class="grid grid-cols-1 gap-4 lg:col-span-4">
+        <div class="rounded-lg bg-white overflow-hidden shadow">
+          <div class="bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+            <div class="sm:mx-auto sm:w-full sm:max-w-md">
+              <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
+                <%= gettext "Register" %>
+              </h2>
+              <p class="mt-2 px-2 text-center text-sm text-gray-600 max-w">
+                <%= gettext "This is a family friendly environment. Please always keep that in mind." %>
+              </p>
+            </div>
+
+            <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+              <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+                <%= form_for @changeset, Routes.user_registration_path(@conn, :create), [class: "space-y-6"], fn f -> %>
+                  <%= if @changeset.action && @changeset.errors do %>
+                    <div class="rounded-md bg-red-50 p-4">
+                      <div class="flex">
+                        <div class="flex-shrink-0">
+                          <!-- Heroicon name: solid/x-circle -->
+                          <svg class="h-5 w-5 text-red-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+                          </svg>
+                        </div>
+                        <div class="ml-3">
+                          <h3 class="text-sm font-medium text-red-800">
+                            <%= gettext("Oops, something went wrong! Please check the errors below.") %>
+                          </h3>
+                          <div class="mt-2 text-sm text-red-700">
+                            <ul class="list-disc pl-5 space-y-1">
+                              <%= for error <- @changeset.errors do %>
+                              <% {field, {reason, _}} = error %>
+                              <li>
+                                <strong><%= field %>:</strong> <%= reason %>
+                              </li>
+                              <% end %>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  <% end %>
+
+                  <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">
+                      <%= gettext "Email address" %>
+                    </label>
+                    <div class="mt-1">
+                      <%= email_input f, :email, required: true, autocomplete: "email", autofocus: "true", class: "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" %>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700">
+                      <%= gettext "Password" %>
+                    </label>
+                    <div class="mt-1">
+                      <%= password_input f, :password, required: true, autocomplete: "new-password", class: "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" %>
+                      <p class="mt-2 text-sm text-gray-500"><%= gettext "The minimum password length is %{length} characters.", length: Integer.to_string(ViewHelpers.min_password_length()) %></p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label for="account" class="block text-sm font-medium text-gray-700">
+                      <%= gettext "User name" %>
+                    </label>
+                    <div class="mt-1">
+                      <%= text_input f, :username, required: true, autocomplete: "username", class: "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" %>
+                      <p class="mt-2 text-sm text-gray-500"><%= gettext "This will be your nickname within the system and is visible to everybody." %></p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label for="gender" class="block text-sm font-medium text-gray-700">
+                      <%= gettext "Gender" %>
+                    </label>
+                    <div class="mt-1">
+                      <%= select f, :gender, [[key: gettext("Mr."), value: "male"],
+                  [key: gettext("Mrs."), value: "female"], [key: gettext("Other"), value: "other"], [key: gettext("prefer not to say"), value: "prefer not to say"]], class: "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm", required: true %>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label for="first_name" class="block text-sm font-medium text-gray-700">
+                      <%= gettext "Given name" %>
+                    </label>
+                    <div class="mt-1">
+                      <%= text_input f, :first_name, autocomplete: "given-name", required: true, class: "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" %>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label for="last_name" class="block text-sm font-medium text-gray-700">
+                      <%= gettext "Family name" %>
+                    </label>
+                    <div class="mt-1">
+                      <%= text_input f, :last_name, autocomplete: "family-name", required: true, class: "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" %>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label for="birthday" class="block text-sm font-medium text-gray-700">
+                      <%= gettext "Birthday" %>
+                    </label>
+                    <div class="mt-1">
+                      <%= date_select f, :birthday, autocomplete: "birthday", required: true, class: "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm", year: [options: 1900..DateTime.utc_now.year], month: [
+                        options: [
+                          {gettext("January"), "1"},
+                          {gettext("February"), "2"},
+                          {gettext("March"), "3"},
+                          {gettext("April"), "4"},
+                          {gettext("May"), "5"},
+                          {gettext("June"), "6"},
+                          {gettext("July"), "7"},
+                          {gettext("August"), "8"},
+                          {gettext("September"), "9"},
+                          {gettext("October"), "10"},
+                          {gettext("November"), "11"},
+                          {gettext("December"), "12"},
+                        ]
+                      ] %>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label for="lang" class="block text-sm font-medium text-gray-700">
+                      <%= gettext "Language" %>
+                    </label>
+                    <div class="mt-1">
+                      <%= select f, :lang, [[key: gettext("English"), value: "en"],
+                  [key: gettext("German"), value: "de"]], selected: @locale, class: "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm", required: true %>
+                    <p class="mt-2 text-sm text-gray-500"><%= gettext "This language will be used to display the webpage." %></p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label for="timezone" class="block text-sm font-medium text-gray-700">
+                      <%= gettext "Timezone" %>
+                    </label>
+                    <div class="mt-1">
+                      <%= select f, :timezone, TimeZoneInfo.time_zones(), selected: "Europe/Berlin", class: "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm", required: true %>
+                      <p class="mt-2 text-sm text-gray-500"><%= gettext "This timezone is used to display all date and time related data." %></p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label for="redeemed_coupon_code" class="block text-sm font-medium text-gray-700">
+                      <%= gettext "Coupon code" %>
+                    </label>
+                    <div class="mt-1">
+                      <%= text_input f, :redeemed_coupon_code, class: "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" %>
+                      <p class="mt-2 text-sm text-gray-500"><%= gettext "If available." %></p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <%= submit gettext("Create account"), class: "w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

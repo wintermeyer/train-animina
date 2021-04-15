@@ -1,0 +1,18 @@
+<h1>Show Coupon</h1>
+
+<ul>
+
+  <li>
+    <strong>Code:</strong>
+    <%= @coupon.code %>
+  </li>
+
+  <li>
+    <strong>Amount:</strong>
+    <%= @coupon.amount %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.coupon_path(@conn, :edit, @coupon) %></span>
+<span><%= link "Back", to: Routes.coupon_path(@conn, :index) %></span>

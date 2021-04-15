@@ -1,0 +1,17 @@
+/* Put additional CSS in here if needed.
+ */
+
+#twitch-embed {
+  height: 0;
+  position: relative;
+  overflow: hidden;
+  padding: 0 0 56.25%;
+  width: 100%;
+  border-radius: 8px;
+}
+
+#twitch-embed iframe {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}

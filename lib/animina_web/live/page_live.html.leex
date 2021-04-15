@@ -1,0 +1,192 @@
+<div class="min-h-screen bg-gray-100">
+  <%= live_component @socket, HeaderComponent, current_user: @current_user, locale: @locale, id: 1 %>
+
+  <main class="-mt-24 pb-8">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+      <h1 class="sr-only">Main</h1>
+      <!-- Main 3 column grid -->
+      <div class="grid grid-cols-1 gap-4 items-start lg:grid-cols-3 lg:gap-8">
+        <!-- Left column -->
+        <div class="grid grid-cols-1 gap-4 lg:col-span-2">
+          <%= if live_flash(@flash, :info) || live_flash(@flash, :error) do %>
+            <%= live_component @socket, FlashMessageComponent, flash: @flash, locale: @locale, id: 1 %>
+          <% end %>
+
+          <%= live_component @socket, LiveVideoComponent, locale: @locale, id: 1 %>
+
+          <%= unless @current_user do %>
+          <section aria-labelledby="trackplan">
+            <div class="bg-white rounded-lg">
+              <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
+                <div class="text-center">
+                  <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                    <span class="block xl:inline"><%= gettext("Web controlled model railway!") %></span>
+                  </h1>
+                  <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                    <%= gettext("You need to log in to play with it.") %>
+                  </p>
+                  <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
+                    <div class="rounded-md shadow">
+                      <%= link gettext("Register"), to: Routes.user_registration_path(@socket, :new), class: "w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10" %>
+                      </a>
+                    </div>
+                    <div class="ml-3 inline-flex">
+                      <%= link gettext("Log in"), to: Routes.user_session_path(@socket, :new), class: "inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200" %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <% end %>
+
+          <%= if @active_slot do %>
+            <%= live_component @socket, ActiveSlotPanelComponent, locale: @locale, current_user: @current_user, active_slot: @active_slot, id: 1, remaining_lifetime: @remaining_lifetime, track_routes: @track_routes, locos: @locos %>
+          <% end %>
+
+          <%= live_component @socket, WaitingListPanelComponent, locale: @locale, id: 1, current_user: @current_user, waiting_list_slots: @waiting_list_slots, waiting_list_slots_count: @waiting_list_slots_count %>
+
+          <%= live_component @socket, PackagesPanelComponent, locale: @locale, id: 1, current_user: @current_user, available_packages: @available_packages, current_user_future_slots: @current_user_future_slots, active_slot: @active_slot %>
+
+          <div class="bg-white rounded-lg">
+            <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
+              <div class="lg:grid lg:grid-cols-3 lg:gap-8">
+                <div>
+                  <h2 class="text-3xl font-extrabold text-gray-900">
+                    <%= gettext("Frequently asked questions") %>
+                  </h2>
+                  <p class="mt-4 text-lg text-gray-500"><%= gettext("Can’t find the answer you’re looking for? Send an email to stefan@wintermeyer.de") %></p>
+                </div>
+                <div class="mt-12 lg:mt-0 lg:col-span-2">
+                  <dl class="space-y-12">
+                    <div>
+                      <dt class="text-lg leading-6 font-medium text-gray-900">
+                        <%= gettext("Who is behind this project?") %>
+                      </dt>
+                      <dd class="mt-2 text-base text-gray-500">
+                        <%= gettext("Stefan Wintermeyer. Google me if you are curious.") %>
+                        <ul class="list-disc ml-8">
+                          <li>Business: <a href="https://www.wintermeyer-consulting.de">https://www.wintermeyer-consulting.de</a></li>
+                          <li><a href="https://twitter.com/wintermeyer">Twitter: @wintermeyer</a></li>
+                          <li><a href="https://www.vutuv.de/users/stefan.wintermeyer">vutuv: @wintermeyer</a></li>
+                        </ul>
+                      </dd>
+                    </div>
+
+                    <div>
+                      <dt class="text-lg leading-6 font-medium text-gray-900">
+                        <%= gettext("How can I get more points?") %>
+                      </dt>
+                      <dd class="mt-2 text-base text-gray-500">
+                        <%= if @current_user do %>
+                        <%= gettext("You get points by simply being online and by inviting new users with your coupon code %{coupon_code}.", coupon_code: @current_user.coupon_code) %>
+                        <% else %>
+                          <%= gettext("Logged in users find a different answer here.") %>
+                        <% end %>
+                      </dd>
+                    </div>
+
+                    <div>
+                      <dt class="text-lg leading-6 font-medium text-gray-900">
+                        <%= gettext("Can I buy points?") %>
+                      </dt>
+                      <dd class="mt-2 text-base text-gray-500">
+                        <%= gettext("Not yet. But in case this is a model railsway emergency: Send an email to stefan@wintermeyer.de and I'll add some points to your account.") %>
+                      </dd>
+                    </div>
+
+                    <div>
+                      <dt class="text-lg leading-6 font-medium text-gray-900">
+                        <%= gettext("Why are the cameras not always in 100% sync?") %>
+                      </dt>
+                      <dd class="mt-2 text-base text-gray-500">
+                        <a href="https://de.wikipedia.org/wiki/Real_Time_Messaging_Protocol">Real Time Messaging Protocol (RTMP)</a>
+                      </dd>
+                    </div>
+
+                    <div>
+                      <dt class="text-lg leading-6 font-medium text-gray-900">
+                        <%= gettext("What is the future of this project?") %>
+                      </dt>
+                      <dd class="mt-2 text-base text-gray-500">
+                        <%= gettext("I do not know.") %>
+                      </dd>
+                    </div>
+
+                    <div>
+                      <dt class="text-lg leading-6 font-medium text-gray-900">
+                        <%= gettext("What software stack do you use?") %>
+                      </dt>
+                      <dd class="mt-2 text-base text-gray-500">
+                        <ul class="list-disc ml-8">
+                          <li><a href="https://wiki.debian.org/RaspberryPi">RaspberryPi Debian</a></li>
+                          <li><a href="https://www.railcontrol.org">RailControll</a></li>
+                          <li><a href="https://obsproject.com">OBS (Open Broadcaster Software)</a></li>
+                          <li><a href="https://www.phoenixframework.org">Phoenix Framework</a></li>
+                          <li><a href="https://tailwindcss.com">tailwindcss</a></li>
+                        </ul>
+                      </dd>
+                    </div>
+
+                    <div>
+                      <dt class="text-lg leading-6 font-medium text-gray-900">
+                        <%= gettext("Can I have a look at the source code?") %>
+                      </dt>
+                      <dd class="mt-2 text-base text-gray-500">
+                        <%= gettext("Yes, of course!") %> <a href="https://github.com/wintermeyer/animina">https://github.com/wintermeyer/animina</a>
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right column -->
+        <div class="grid grid-cols-1 gap-4">
+
+          <%= if length(@current_user_future_slots) > 0 do %>
+            <%= live_component @socket, FutureSlotsPanelComponent, locale: @locale, id: 1, current_user: @current_user, current_user_future_slots: @current_user_future_slots %>
+          <% end %>
+
+          <!-- Trackplan panel -->
+          <section aria-labelledby="trackplan">
+            <div class="rounded-lg bg-gray-200 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-1 sm:gap-px">
+              <h2 class="sr-only" id="trackplan"><%= gettext("Trackplan") %></h2>
+
+              <div class="bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-cyan-500">
+                <img src="<%= Routes.static_path(@socket, "/images/gleisplan-1.png") %>">
+
+                <p class="mt-2 text-sm text-gray-500">
+                  <%= gettext("The detailed track plan of our Märklin model railway. There is a total of 3 locomotives and 10 stopping places.") %>
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <%= if @current_user do %>
+            <!-- Coupon Code panel -->
+            <section aria-labelledby="trackplan">
+              <div class="rounded-lg bg-gray-200 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-1 sm:gap-px">
+                <h2 class="sr-only" id="Coupon Code"><%= gettext("Coupon Code") %></h2>
+
+                <div class="bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-cyan-500">
+              <h2 class="text-base font-medium text-gray-900"><%= gettext("Coupon code") %></h2>
+                <p class="mt-2 text-sm text-gray-500">
+                  <%= gettext("Invite your friends and receive 100 points for every new user who redeems the 100 points coupon code %{coupon}.", coupon: @current_user.coupon_code) %>
+                  </p>
+                </div>
+              </div>
+            </section>
+          <% end %>
+
+          <%= live_component @socket, UsersListPanelComponent, locale: @locale, id: 1 %>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <%= live_component @socket, FooterComponent, locale: @locale, id: 1 %>
+</div>

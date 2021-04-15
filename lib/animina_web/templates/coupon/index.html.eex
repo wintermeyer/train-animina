@@ -1,0 +1,30 @@
+<h1>Listing Coupons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Amount</th>
+      <th>Redeemer</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for coupon <- @coupons do %>
+    <tr>
+      <td><%= coupon.code %></td>
+      <td><%= coupon.amount %></td>
+      <td><%= if coupon.redeemer do %><a href="/u/<%= coupon.redeemer.username %>"><%= coupon.redeemer.username %></a><% end %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.coupon_path(@conn, :show, coupon) %></span>
+        <span><%= link "Edit", to: Routes.coupon_path(@conn, :edit, coupon) %></span>
+        <span><%= link "Delete", to: Routes.coupon_path(@conn, :delete, coupon), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Coupon", to: Routes.coupon_path(@conn, :new) %></span>

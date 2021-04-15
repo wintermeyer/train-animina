@@ -1,0 +1,704 @@
+## "msgid"s in this file come from POT (.pot) files.
+##
+## Do not add, change, or remove "msgid"s manually here as
+## they're tied to the ones in the corresponding POT file
+## (with the same domain).
+##
+## Use "mix gettext.extract --merge" or "mix gettext.merge"
+## to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: de\n"
+"Plural-Forms: nplurals=2\n"
+
+#, elixir-format
+#: lib/animina_web/live/components/panels/announcements_panel_component.ex:11
+msgid "Announcements"
+msgstr "Mitteilungen"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:117
+msgid "April"
+msgstr "April"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:121
+msgid "August"
+msgstr "August"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:109
+msgid "Birthday"
+msgstr "Geburtstag"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:125
+msgid "December"
+msgstr "Dezember"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:100
+#: lib/animina_web/templates/user_settings/edit.html.eex:166
+msgid "Family name"
+msgstr "Nachname"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:115
+msgid "February"
+msgstr "Februar"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:81
+msgid "Gender"
+msgstr "Geschlecht"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:91
+#: lib/animina_web/templates/user_settings/edit.html.eex:161
+msgid "Given name"
+msgstr "Vorname"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:114
+msgid "January"
+msgstr "Januar"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:120
+msgid "July"
+msgstr "Juli"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:119
+msgid "June"
+msgstr "Juni"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:116
+msgid "March"
+msgstr "März"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:118
+msgid "May"
+msgstr "Mai"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:124
+msgid "November"
+msgstr "November"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:123
+msgid "October"
+msgstr "Oktober"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:61
+#: lib/animina_web/templates/user_session/new.html.eex:50 lib/animina_web/templates/user_settings/edit_email.html.eex:100
+msgid "Password"
+msgstr "Passwort"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:122
+msgid "September"
+msgstr "September"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:71
+msgid "User name"
+msgstr "Accountname"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:65
+#: lib/animina_web/templates/user_reset_password/edit.html.eex:53
+msgid "The minimum password length is %{length} characters."
+msgstr "Das Passwort muss mindestens %{length} Zeichen lang sein."
+
+#, elixir-format
+#: lib/animina_web/templates/user_confirmation/new.html.eex:22
+#: lib/animina_web/templates/user_registration/new.html.eex:52 lib/animina_web/templates/user_reset_password/new.html.eex:22
+#: lib/animina_web/templates/user_session/new.html.eex:41
+msgid "Email address"
+msgstr "E-Mail Adresse"
+
+#, elixir-format
+#: lib/animina_web/live/components/top_navigation/header_component.ex:73
+#: lib/animina_web/live/page_live.html.leex:34 lib/animina_web/templates/layout/app.html.eex:62
+#: lib/animina_web/templates/user_session/new.html.eex:13 lib/animina_web/templates/user_session/new.html.eex:72
+msgid "Log in"
+msgstr "Anmelden"
+
+#, elixir-format
+#: lib/animina_web/live/components/top_navigation/header_component.ex:72
+#: lib/animina_web/live/page_live.html.leex:30 lib/animina_web/templates/layout/app.html.eex:61
+#: lib/animina_web/templates/user_registration/new.html.eex:3 lib/animina_web/templates/user_registration/new.html.eex:12
+msgid "Register"
+msgstr "Registrieren"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:15
+msgid "This is a family friendly environment. Please always keep that in mind."
+msgstr "Dies ist eine familienfreundliche Webseite. Bitte denken Sie immer daran."
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:84
+#: lib/animina_web/templates/user_settings/edit.html.eex:156
+msgid "Mr."
+msgstr "Herr"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:85
+#: lib/animina_web/templates/user_settings/edit.html.eex:157
+msgid "Mrs."
+msgstr "Frau"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:85
+#: lib/animina_web/templates/user_settings/edit.html.eex:157
+msgid "Other"
+msgstr "Divers"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:85
+#: lib/animina_web/templates/user_settings/edit.html.eex:157
+msgid "prefer not to say"
+msgstr "keine Angabe"
+
+#, elixir-format
+#: lib/animina_web/templates/user_reset_password/new.html.eex:3
+#: lib/animina_web/templates/user_reset_password/new.html.eex:13 lib/animina_web/templates/user_session/new.html.eex:67
+msgid "Forgot your password?"
+msgstr "Passwort vergessen?"
+
+#, elixir-format
+#: lib/animina_web/templates/user_session/new.html.eex:62
+msgid "Remember me"
+msgstr "Angemeldet bleiben"
+
+#, elixir-format
+#: lib/animina_web/controllers/user_registration_controller.ex:27
+msgid "Please check your email. You'll receive an email from us with a confirmation link."
+msgstr "Bitte überprüfen Sie Ihr E-Mail Postfach. Gleich bekommen Sie eine E-Mail mit einem Bestätigungs Link."
+
+#, elixir-format
+#: lib/animina_web/controllers/user_session_controller.ex:17
+msgid "Invalid email or password"
+msgstr "Falsche E-Mail Adresse oder Passwort"
+
+#, elixir-format
+#: lib/animina_web/controllers/user_session_controller.ex:23
+msgid "Logged out successfully."
+msgstr "Sie sind jetzt abgemeldet. Bis bald!"
+
+#, elixir-format
+#: lib/animina_web/controllers/user_settings_controller.ex:39
+msgid "A link to confirm your email change has been sent to the new address."
+msgstr "Um Ihre E-Mail Adresse zu überprüfen, senden wir Ihnen jetzt eine E-Mail mit einem Bestätigungslink."
+
+#, elixir-format
+#: lib/animina_web/controllers/user_settings_controller.ex:57
+msgid "Password updated successfully. Please log in with your new password."
+msgstr "Ihr Passwort wurde geändert. Bitte melden Sie sich jetzt mit dem neuen Passwort an."
+
+#, elixir-format
+#: lib/animina_web/controllers/user_settings_controller.ex:73
+#: lib/animina_web/controllers/user_settings_controller.ex:88
+msgid "Profile data changed successfully."
+msgstr "Ihre Accountdaten wurden geändert."
+
+#, elixir-format
+#: lib/animina_web/controllers/user_settings_controller.ex:100
+msgid "Email changed successfully."
+msgstr "Ihre E-Mail Adresse wurde geändert."
+
+#, elixir-format
+#: lib/animina_web/controllers/user_settings_controller.ex:105
+msgid "Email change link is invalid or it has expired."
+msgstr "Der von Ihnen benutze Bestätigungslink ist entweder fehlerhaft oder abgelaufen."
+
+#, elixir-format
+#: lib/animina_web/controllers/user_confirmation_controller.ex:23
+msgid "If your email is in our system and it has not been confirmed yet, you will receive an email with instructions shortly."
+msgstr "Wenn Ihre E-Mail Adresse in unserem System gespeichert wurde, bekommen Sie bald eine E-Mail mit weiteren Informationen."
+
+#, elixir-format
+#: lib/animina_web/controllers/user_confirmation_controller.ex:80
+msgid "User created successfully. We credited your account with %{points} points."
+msgstr "Ihr Account ist jetzt aktiv. Als Willkommensgeschenk haben wir Ihnen %{points} Punkte gutgeschrieben."
+
+#, elixir-format
+#: lib/animina_web/controllers/user_confirmation_controller.ex:99
+msgid "Account confirmation link is invalid or it has expired."
+msgstr "Der benutzte Link ist falsch oder bereits abgelaufen."
+
+#, elixir-format
+#: lib/animina_web/live/user_live.html.leex:41
+#: lib/animina_web/live/user_live.html.leex:47 lib/animina_web/templates/user_settings/edit.html.eex:107
+msgid "About"
+msgstr "Über mich"
+
+#, elixir-format
+#: lib/animina_web/templates/user_settings/edit.html.eex:87
+msgid "All information in this profile form will be visible for every user of this page."
+msgstr "Alle Informationen in diesem Formular werden für alle Besucher dieser Webseite abrufbar sein."
+
+#, elixir-format
+#: lib/animina_web/templates/user_settings/edit.html.eex:120
+msgid "Avatar"
+msgstr "Avatar"
+
+#, elixir-format
+#: lib/animina_web/templates/user_settings/edit.html.eex:131
+#: lib/animina_web/templates/user_settings/edit.html.eex:144
+msgid "Change"
+msgstr "Ändern"
+
+#, elixir-format
+#: lib/animina_web/templates/user_reset_password/edit.html.eex:59
+msgid "Confirm new password"
+msgstr "Neues Passwort wiederholen"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:163
+msgid "Create account"
+msgstr "Benutzer einrichten"
+
+#, elixir-format
+#: lib/animina_web/live/page_live.html.leex:157
+#: lib/animina_web/live/user_live.html.leex:127
+msgid "General chatroom for registered users."
+msgstr "Allgemeiner Chatroom für registrierte Benutzer."
+
+#, elixir-format
+#: lib/animina_web/live/user_live.html.leex:60
+#: lib/animina_web/templates/user_settings/edit.html.eex:171
+msgid "Homepage"
+msgstr "Homepage"
+
+#, elixir-format
+#: lib/animina_web/templates/user_settings/edit_email.html.eex:95
+msgid "New email address"
+msgstr "Neue E-Mail Adresse"
+
+#, elixir-format
+#: lib/animina_web/templates/user_reset_password/edit.html.eex:49
+#: lib/animina_web/templates/user_settings/edit_password.html.eex:95
+msgid "New password"
+msgstr "Neues Passwort"
+
+#, elixir-format
+#: lib/animina_web/templates/user_settings/edit_password.html.eex:105
+msgid "Old password"
+msgstr "Altes Passwort"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:33
+#: lib/animina_web/templates/user_reset_password/edit.html.eex:30 lib/animina_web/templates/user_settings/edit.html.eex:63
+#: lib/animina_web/templates/user_settings/edit_email.html.eex:66 lib/animina_web/templates/user_settings/edit_lang_and_timezone.html.eex:66
+#: lib/animina_web/templates/user_settings/edit_password.html.eex:65
+msgid "Oops, something went wrong! Please check the errors below."
+msgstr "Validierungsfehler! Bitte überprüfen Sie die folgenden Fehlemeldungen."
+
+#, elixir-format
+#: lib/animina_web/templates/user_settings/edit_password.html.eex:100
+msgid "Password confirmation"
+msgstr "Passwort wiederholen"
+
+#, elixir-format
+#: lib/animina_web/templates/user_settings/edit.html.eex:174
+msgid "Please enter a complete URL (incl. https://)."
+msgstr "Bitte geben Sie eine complete URL ein (inkl. https://)."
+
+#, elixir-format
+#: lib/animina_web/templates/user_settings/edit.html.eex:15
+#: lib/animina_web/templates/user_settings/edit.html.eex:85 lib/animina_web/templates/user_settings/edit_email.html.eex:15
+#: lib/animina_web/templates/user_settings/edit_lang_and_timezone.html.eex:15 lib/animina_web/templates/user_settings/edit_password.html.eex:15
+msgid "Profile"
+msgstr "Allgemeine Accountdaten"
+
+#, elixir-format
+#: lib/animina_web/templates/user_confirmation/new.html.eex:3
+#: lib/animina_web/templates/user_confirmation/new.html.eex:13 lib/animina_web/templates/user_confirmation/new.html.eex:30
+msgid "Resend confirmation instructions"
+msgstr "Bestätigungsdaten noch mal verschicken"
+
+#, elixir-format
+#: lib/animina_web/templates/user_reset_password/edit.html.eex:3
+#: lib/animina_web/templates/user_reset_password/edit.html.eex:12 lib/animina_web/templates/user_reset_password/edit.html.eex:67
+#: lib/animina_web/templates/user_settings/edit_password.html.eex:110
+msgid "Reset password"
+msgstr "Passwort zurücksetzen"
+
+#, elixir-format
+#: lib/animina_web/templates/user_settings/edit.html.eex:179
+msgid "Safe changes"
+msgstr "Änderungen abspeichern"
+
+#, elixir-format
+#: lib/animina_web/templates/user_reset_password/new.html.eex:30
+msgid "Send instructions to reset password"
+msgstr "Instruktionen zum Passwort Reset zuschicken"
+
+#, elixir-format
+#: lib/animina_web/templates/user_settings/edit.html.eex:113
+msgid "Short bio. The use of markdown is possible."
+msgstr "Kurze Biografie. Die Benutzung von Markdown ist möglich."
+
+#, elixir-format
+#: lib/animina_web/templates/user_settings/edit.html.eex:35
+#: lib/animina_web/templates/user_settings/edit_email.html.eex:36 lib/animina_web/templates/user_settings/edit_email.html.eex:87
+#: lib/animina_web/templates/user_settings/edit_email.html.eex:105 lib/animina_web/templates/user_settings/edit_lang_and_timezone.html.eex:36
+#: lib/animina_web/templates/user_settings/edit_password.html.eex:35
+msgid "Update email address"
+msgstr "Ändern der E-Mail Adresse"
+
+#, elixir-format
+#: lib/animina_web/templates/user_settings/edit.html.eex:25
+#: lib/animina_web/templates/user_settings/edit_email.html.eex:25 lib/animina_web/templates/user_settings/edit_lang_and_timezone.html.eex:25
+#: lib/animina_web/templates/user_settings/edit_password.html.eex:25 lib/animina_web/templates/user_settings/edit_password.html.eex:87
+msgid "Update password"
+msgstr "Ändern des Passwortes"
+
+#, elixir-format
+#: lib/animina_web/templates/user_settings/edit_email.html.eex:89
+#: lib/animina_web/templates/user_settings/edit_lang_and_timezone.html.eex:89
+msgid "Use this form to update the email address in our system."
+msgstr "Mit diesem Formular können Sie die gespeicherte E-Mail Adresse ändern."
+
+#, elixir-format
+#: lib/animina_web/templates/user_settings/edit_password.html.eex:89
+msgid "Use this form to update your password. You'll be logged out after the update. Please log in again."
+msgstr "Mit diesem Formular können Sie Ihr Passwort ändern. Nach der Änderung werden Sie automatisch ausgelogt. Bitte melden Sie sich danach wieder an."
+
+#, elixir-format
+#: lib/animina_web/templates/user_settings/edit.html.eex:132
+#: lib/animina_web/templates/user_settings/edit.html.eex:145
+msgid "User Avatar"
+msgstr "Avatar"
+
+#, elixir-format
+#: lib/animina_web/templates/user_settings/edit.html.eex:95
+msgid "Username"
+msgstr "Accountname"
+
+#, elixir-format
+#: lib/animina_web/live/page_live.html.leex:198
+#: lib/animina_web/live/user_live.html.leex:172
+msgid "Your message ..."
+msgstr "Ihre Nachricht ..."
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:136
+#: lib/animina_web/templates/user_settings/edit_lang_and_timezone.html.eex:97
+msgid "English"
+msgstr "Englisch"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:137
+#: lib/animina_web/templates/user_settings/edit_lang_and_timezone.html.eex:98
+msgid "German"
+msgstr "Deutsch"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:133
+#: lib/animina_web/templates/user_settings/edit_lang_and_timezone.html.eex:96
+msgid "Language"
+msgstr "Sprache"
+
+#, elixir-format
+#: lib/animina_web/live/components/top_navigation/header_component.ex:66
+#: lib/animina_web/templates/layout/app.html.eex:57
+msgid "Log out"
+msgstr "Abmelden"
+
+#, elixir-format
+#: lib/animina_web/live/components/top_navigation/header_component.ex:65
+#: lib/animina_web/templates/layout/app.html.eex:56
+msgid "Settings"
+msgstr "Einstellungen"
+
+#, elixir-format
+#: lib/animina_web/templates/user_settings/edit.html.eex:45
+#: lib/animina_web/templates/user_settings/edit_email.html.eex:46 lib/animina_web/templates/user_settings/edit_lang_and_timezone.html.eex:46
+#: lib/animina_web/templates/user_settings/edit_lang_and_timezone.html.eex:87 lib/animina_web/templates/user_settings/edit_password.html.eex:45
+msgid "Language and Timezone"
+msgstr "Spache und Zeitzone"
+
+#, elixir-format
+#: lib/animina_web/templates/user_settings/edit_lang_and_timezone.html.eex:108
+msgid "Save"
+msgstr "Abspeichern"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:138
+msgid "This language will be used to display the webpage."
+msgstr "Diese Sprache wird zur Darstellung der Webseite benutzt."
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:148
+msgid "This timezone is used to display all date and time related data."
+msgstr "Diese Zeitzone wird zur Darstellung von Uhrzeiten benutzt."
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:75
+msgid "This will be your nickname within the system and is visible to everybody."
+msgstr "Ihr Username im System. Für alle Besucher einsehbar."
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:144
+#: lib/animina_web/templates/user_settings/edit_lang_and_timezone.html.eex:102
+msgid "Timezone"
+msgstr "Zeitzone"
+
+#, elixir-format
+#: lib/animina_web/live/components/panels/users_list_panel_component.ex:40
+#: lib/animina_web/live/components/top_navigation/header_component.ex:38 lib/animina_web/live/user_live.html.leex:69
+#: lib/animina_web/templates/layout/app.html.eex:28
+msgid "Points"
+msgstr "Punkte"
+
+#, elixir-format
+#: lib/animina_web/live/user_live.html.leex:142
+msgid "Currently no user is logged in."
+msgstr "Aktuell sind keine User angemeldet."
+
+#, elixir-format
+#: lib/animina_web/live/page_live.html.leex:161
+#: lib/animina_web/live/user_live.html.leex:132
+msgid "Number of logged in users:"
+msgstr "Anzahl angemeldeter User:"
+
+#, elixir-format
+#: lib/animina_web/live/user_live.html.leex:30
+msgid "Account created at: "
+msgstr "Der Account wurde angelegt am "
+
+#, elixir-format
+#: lib/animina_web/live/user_live.html.leex:53
+msgid "No information available."
+msgstr "Keine Information gespeichert."
+
+#, elixir-format
+#: lib/animina_web/live/user_live.html.leex:83
+#: lib/animina_web/live/user_live.html.leex:89
+msgid "Old messages"
+msgstr "Alte Nachrichten"
+
+#, elixir-format
+#: lib/animina_web/live/user_live.html.leex:93
+msgid "The last %{amount} chat messages of this user."
+msgstr "Die letzten %{amount} Nachrichten von diesem User."
+
+#, elixir-format
+#: lib/animina_web/live/components/panels/packages_panel_component.ex:57
+msgid "%{count} locomotives to control"
+msgstr "%{count} Lokomotiven die Du fernsteuern kannst"
+
+#, elixir-format
+#: lib/animina_web/live/components/panels/packages_panel_component.ex:69
+msgid "%{count} stations to use"
+msgstr "%{count} Haltepunkte"
+
+#, elixir-format
+#: lib/animina_web/live/components/panels/future_slots_panel_component.ex:23
+#: lib/animina_web/live/components/panels/waiting_list_panel_component.ex:24
+msgid "%{seconds} seconds"
+msgstr "%{seconds} Sekunden"
+
+#, elixir-format
+#: lib/animina_web/live/components/panels/packages_panel_component.ex:81
+msgid "%{seconds} seconds of playtime"
+msgstr "%{seconds} Sekunden Spielzeit"
+
+#, elixir-format
+#: lib/animina_web/live/components/panels/packages_panel_component.ex:127
+msgid "All aboard!"
+msgstr "Auf gehts!"
+
+#, elixir-format
+#: lib/animina_web/live/page_live.html.leex:91
+msgid "Can I buy points?"
+msgstr "Kann ich Punkte kaufen?"
+
+#, elixir-format
+#: lib/animina_web/live/page_live.html.leex:58
+msgid "Can’t find the answer you’re looking for? Send an email to stefan@wintermeyer.de"
+msgstr "Ist Deine Frage nicht dabei? Dann schreibe eine E-Mail an stefan@wintermeyer.de"
+
+#, elixir-format
+#: lib/animina_web/live/components/panels/packages_panel_component.ex:14
+msgid "Control the Model Railway"
+msgstr "Steuere die Modelleisenbahn"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:154
+msgid "Coupon code"
+msgstr "Coupon Code"
+
+#, elixir-format
+#: lib/animina_web/live/components/panels/future_slots_panel_component.ex:33
+#: lib/animina_web/live/components/panels/waiting_list_panel_component.ex:34
+msgid "Estimated start time"
+msgstr "Geschätzte Startzeit"
+
+#, elixir-format
+#: lib/animina_web/live/page_live.html.leex:56
+msgid "Frequently asked questions"
+msgstr "Oft gestellte Fragen (FAQ)"
+
+#, elixir-format
+#: lib/animina_web/live/page_live.html.leex:78
+msgid "How can I get more points?"
+msgstr "Wie kann ich mehr Punkte bekommen?"
+
+#, elixir-format
+#: lib/animina_web/templates/user_registration/new.html.eex:158
+msgid "If available."
+msgstr "Wenn verfügbar."
+
+#, elixir-format
+#: lib/animina_web/live/components/panels/packages_panel_component.ex:17
+#: lib/animina_web/live/components/panels/packages_panel_component.ex:141
+msgid "Invite your friends and receive 100 points for every new user who redeems the 100 points coupon code %{coupon}."
+msgstr "Lade einen Freund mit dem Coupon Code %{coupon} für 100 extra Punkte ein. Du bekommst dann ebenfalls 100 Punkte gut geschrieben."
+
+#, elixir-format
+#: lib/animina_web/live/page_live.html.leex:84
+msgid "Logged in users find a different answer here."
+msgstr "Eingeloggte User finden hier eine andere Antwort."
+
+#, elixir-format
+#: lib/animina_web/live/components/panels/active_slot_panel_component.ex:110
+msgid "Minutes"
+msgstr "Minuten"
+
+#, elixir-format
+#: lib/animina_web/live/components/panels/active_slot_panel_component.ex:83
+msgid "Next available destinations"
+msgstr "Nächste mögliche Ziele (Haltepunkte)"
+
+#, elixir-format
+#: lib/animina_web/live/components/panels/active_slot_panel_component.ex:75
+msgid "No route available."
+msgstr "Es steht keine Fahrstrasse zur Verfügung."
+
+#, elixir-format
+#: lib/animina_web/live/page_live.html.leex:94
+msgid "Not yet. But in case this is a model railsway emergency: Send an email to stefan@wintermeyer.de and I'll add some points to your account."
+msgstr "Noch nicht. Aber in Modelleisenbahn Notfällen schreibt bitte eine E-Mail an stefan@wintermeyer.de. Dann gibt es ein paar Punkte gratis."
+
+#, elixir-format
+#: lib/animina_web/live/components/panels/packages_panel_component.ex:120
+msgid "Play together with up to %{players} of your friends."
+msgstr "Spiele mit bis zu %{players} anderen Spielern."
+
+#, elixir-format
+#: lib/animina_web/live/components/panels/active_slot_panel_component.ex:114
+msgid "Seconds"
+msgstr "Sekunden"
+
+#, elixir-format
+#: lib/animina_web/live/components/panels/packages_panel_component.ex:94
+msgid "Set up a fixed time to play"
+msgstr "Fixe Uhrzeit setzen"
+
+#, elixir-format
+#: lib/animina_web/live/page_live.html.leex:67
+msgid "Stefan Wintermeyer. Google me if you are curious."
+msgstr "Stefan Wintermeyer. Google weiß mehr über mich."
+
+#, elixir-format
+#: lib/animina_web/live/page_live.html.leex:223
+msgid "The detailed track plan of our Märklin model railway. There is a total of 3 locomotives and 10 stopping places."
+msgstr "Der detailierte Gleisplan der Märklin Modelleisenbahn. Es gibt insgesamt 3 Lokomotiven und 10 Haltepunkte."
+
+#, elixir-format
+#: lib/animina_web/live/components/panels/active_slot_panel_component.ex:66
+msgid "This train is moving or about to move. Please check the video stream."
+msgstr "Dieser Zug ist gerade oder sehr bald in Bewegung. Bitte überprüfe den Livestream."
+
+#, elixir-format
+#: lib/animina_web/live/components/panels/users_list_panel_component.ex:25
+msgid "Top Users"
+msgstr "Top User"
+
+#, elixir-format
+#: lib/animina_web/live/page_live.html.leex:217
+msgid "Trackplan"
+msgstr "Gleisplan"
+
+#, elixir-format
+#: lib/animina_web/live/components/panels/users_list_panel_component.ex:45
+msgid "View"
+msgstr "Ansicht"
+
+#, elixir-format
+#: lib/animina_web/live/components/panels/waiting_list_panel_component.ex:11
+msgid "Waiting list"
+msgstr "Warteliste"
+
+#, elixir-format
+#: lib/animina_web/live/components/panels/packages_panel_component.ex:106
+msgid "Waiting list position for the next available slot"
+msgstr "Wartelistenposition für den nächsten freien Slot"
+
+#, elixir-format
+#: lib/animina_web/live/page_live.html.leex:23
+msgid "Web controlled model railway!"
+msgstr "Ferngesteuerte Modelleisenbahn!"
+
+#, elixir-format
+#: lib/animina_web/live/page_live.html.leex:109
+msgid "What is the future of this project?"
+msgstr "Was ist in Zukunft geplant?"
+
+#, elixir-format
+#: lib/animina_web/live/page_live.html.leex:64
+msgid "Who is behind this project?"
+msgstr "Wer steckt hinter diesem Projekt?"
+
+#, elixir-format
+#: lib/animina_web/live/page_live.html.leex:82
+msgid "You get points by simply being online and by inviting new users with your coupon code %{coupon_code}."
+msgstr "Du bekommst Punkte beim angemeldet sein und beim erfolgreichen Einladen von neuen Usern mit dem Coupon Code %{coupon_code}."
+
+#, elixir-format
+#: lib/animina_web/live/page_live.html.leex:26
+msgid "You need to log in to play with it."
+msgstr "Zum Spielen musst Du Dich einloggen."
+
+#, elixir-format
+#: lib/animina_web/live/components/panels/future_slots_panel_component.ex:11
+msgid "Your waiting list position"
+msgstr "Deine Wartelistenposition"
+
+#, elixir-format
+#: lib/animina_web/live/components/panels/packages_panel_component.ex:38
+msgid "points"
+msgstr "Punkte"
+
+#, elixir-format
+#: lib/animina_web/live/page_live.html.leex:133
+msgid "Can I have a look at the source code?"
+msgstr "Kann ich einmal einen Blick in den Source-Code werfen?"
+
+#, elixir-format
+#: lib/animina_web/live/page_live.html.leex:112
+msgid "I do not know."
+msgstr "Ich weiß es nicht."
+
+#, elixir-format
+#: lib/animina_web/live/page_live.html.leex:118
+msgid "What software stack do you use?"
+msgstr "Welcher Software Stack ist im Einsatz?"
+
+#, elixir-format
+#: lib/animina_web/live/page_live.html.leex:136
+msgid "Yes, of course!"
+msgstr "Ja, natürlich!"
+
+#, elixir-format
+#: lib/animina_web/live/page_live.html.leex:100
+msgid "Why are the cameras not always in 100% sync?"
+msgstr "Warum sind die Kameras nicht immer 100% synchronisiert?"

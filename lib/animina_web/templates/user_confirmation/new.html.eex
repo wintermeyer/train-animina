@@ -1,0 +1,40 @@
+<main class="-mt-24 pb-8">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <h1 class="sr-only"><%= gettext("Resend confirmation instructions") %></h1>
+    <!-- Main 3 column grid -->
+    <div class="grid grid-cols-1 gap-4 items-start lg:grid-cols-3 lg:gap-8">
+      <!-- Left column -->
+      <div class="grid grid-cols-1 gap-4 lg:col-span-4">
+
+        <div class="rounded-lg bg-white overflow-hidden shadow">
+          <div class="bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+            <div class="sm:mx-auto sm:w-full sm:max-w-md">
+              <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
+                <%= gettext("Resend confirmation instructions") %>
+              </h2>
+            </div>
+
+            <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+              <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+                <%= form_for :user, Routes.user_confirmation_path(@conn, :create), [class: "space-y-6"], fn f -> %>
+                  <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">
+                      <%= gettext("Email address") %>
+                    </label>
+                    <div class="mt-1">
+                      <%= email_input f, :email, required: true, autocomplete: "email", autofocus: "true", class: "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" %>
+                    </div>
+                  </div>
+
+                  <div>
+                      <%= submit gettext("Resend confirmation instructions"), class: "w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
