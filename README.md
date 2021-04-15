@@ -1,3 +1,7 @@
+# Control a live model railway via a web interface
+
+![Screencast](https://github.com/wintermeyer/animina/blob/main/assets/static/images/demo.gif)
+
 # Developer documentation
 
 To start your Phoenix server:
