@@ -13,10 +13,8 @@ defmodule Animina.RecurrentRunner do
   def init(state) do
     fetch_track_routes_from_railcontrol()
 
-    unless Mix.env() == :test do
-      :timer.send_interval(1_000, :work_every_second)
-      :timer.send_interval(120_000, :work_every_two_minutes)
-    end
+    :timer.send_interval(1_000, :work_every_second)
+    :timer.send_interval(120_000, :work_every_two_minutes)
 
     {:ok, state}
   end
