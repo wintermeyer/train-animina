@@ -5,6 +5,7 @@
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
       <h1 class="sr-only">Main</h1>
       <!-- Main 3 column grid -->
+      <div class="grid grid-cols-1 gap-4 items-start lg:grid-cols-3 lg:gap-8">
         <!-- Left column -->
         <div class="grid grid-cols-1 gap-4 lg:col-span-2">
           <%= if live_flash(@flash, :info) || live_flash(@flash, :error) do %>
@@ -184,6 +185,7 @@
           <%= live_component @socket, UsersListPanelComponent, locale: @locale, id: 1 %>
         </div>
       </div>
+    </div>
   </main>
 
   <%= live_component @socket, FooterComponent, locale: @locale, id: 1 %>
