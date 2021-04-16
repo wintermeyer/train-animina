@@ -78,7 +78,7 @@ config :phoenix, :plug_init_mode, :runtime
 
 config :animina,
   min_password_length: 3,
-  new_account_points_bonus: 200
+  new_account_points_bonus: 2000
 
 config :animina, Animina.Mailer, adapter: Swoosh.Adapters.Local
 
