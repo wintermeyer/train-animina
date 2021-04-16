@@ -122,16 +122,18 @@ msgid "Email address"
 msgstr ""
 
 #, elixir-format
-#: lib/animina_web/live/components/top_navigation/header_component.ex:73
-#: lib/animina_web/live/page_live.html.leex:34 lib/animina_web/templates/layout/app.html.eex:62
-#: lib/animina_web/templates/user_session/new.html.eex:13 lib/animina_web/templates/user_session/new.html.eex:72
+#: lib/animina_web/live/components/top_navigation/header_component.ex:63
+#: lib/animina_web/live/components/top_navigation/header_component.ex:147 lib/animina_web/live/page_live.html.leex:34
+#: lib/animina_web/templates/layout/app.html.eex:62 lib/animina_web/templates/user_session/new.html.eex:13
+#: lib/animina_web/templates/user_session/new.html.eex:72
 msgid "Log in"
 msgstr ""
 
 #, elixir-format
-#: lib/animina_web/live/components/top_navigation/header_component.ex:72
-#: lib/animina_web/live/page_live.html.leex:30 lib/animina_web/templates/layout/app.html.eex:61
-#: lib/animina_web/templates/user_registration/new.html.eex:3 lib/animina_web/templates/user_registration/new.html.eex:12
+#: lib/animina_web/live/components/top_navigation/header_component.ex:62
+#: lib/animina_web/live/components/top_navigation/header_component.ex:146 lib/animina_web/live/page_live.html.leex:30
+#: lib/animina_web/templates/layout/app.html.eex:61 lib/animina_web/templates/user_registration/new.html.eex:3
+#: lib/animina_web/templates/user_registration/new.html.eex:12
 msgid "Register"
 msgstr ""
 
@@ -222,12 +224,12 @@ msgid "If your email is in our system and it has not been confirmed yet, you wil
 msgstr ""
 
 #, elixir-format
-#: lib/animina_web/controllers/user_confirmation_controller.ex:80
+#: lib/animina_web/controllers/user_confirmation_controller.ex:94
 msgid "User created successfully. We credited your account with %{points} points."
 msgstr ""
 
 #, elixir-format
-#: lib/animina_web/controllers/user_confirmation_controller.ex:99
+#: lib/animina_web/controllers/user_confirmation_controller.ex:113
 msgid "Account confirmation link is invalid or it has expired."
 msgstr ""
 
@@ -264,7 +266,6 @@ msgid "Create account"
 msgstr ""
 
 #, elixir-format
-#: lib/animina_web/live/page_live.html.leex:157
 #: lib/animina_web/live/user_live.html.leex:127
 msgid "General chatroom for registered users."
 msgstr ""
@@ -382,7 +383,6 @@ msgid "Username"
 msgstr ""
 
 #, elixir-format
-#: lib/animina_web/live/page_live.html.leex:198
 #: lib/animina_web/live/user_live.html.leex:172
 msgid "Your message ..."
 msgstr ""
@@ -406,14 +406,14 @@ msgid "Language"
 msgstr ""
 
 #, elixir-format
-#: lib/animina_web/live/components/top_navigation/header_component.ex:66
-#: lib/animina_web/templates/layout/app.html.eex:57
+#: lib/animina_web/live/components/top_navigation/header_component.ex:56
+#: lib/animina_web/live/components/top_navigation/header_component.ex:138 lib/animina_web/templates/layout/app.html.eex:57
 msgid "Log out"
 msgstr ""
 
 #, elixir-format
-#: lib/animina_web/live/components/top_navigation/header_component.ex:65
-#: lib/animina_web/templates/layout/app.html.eex:56
+#: lib/animina_web/live/components/top_navigation/header_component.ex:55
+#: lib/animina_web/live/components/top_navigation/header_component.ex:137 lib/animina_web/templates/layout/app.html.eex:56
 msgid "Settings"
 msgstr ""
 
@@ -451,9 +451,9 @@ msgid "Timezone"
 msgstr ""
 
 #, elixir-format
-#: lib/animina_web/live/components/panels/users_list_panel_component.ex:40
-#: lib/animina_web/live/components/top_navigation/header_component.ex:38 lib/animina_web/live/user_live.html.leex:69
-#: lib/animina_web/templates/layout/app.html.eex:28
+#: lib/animina_web/live/components/panels/users_list_panel_component.ex:42
+#: lib/animina_web/live/components/top_navigation/header_component.ex:38 lib/animina_web/live/components/top_navigation/header_component.ex:133
+#: lib/animina_web/live/user_live.html.leex:69 lib/animina_web/templates/layout/app.html.eex:28
 msgid "Points"
 msgstr ""
 
@@ -463,7 +463,6 @@ msgid "Currently no user is logged in."
 msgstr ""
 
 #, elixir-format
-#: lib/animina_web/live/page_live.html.leex:161
 #: lib/animina_web/live/user_live.html.leex:132
 msgid "Number of logged in users:"
 msgstr ""
@@ -531,6 +530,7 @@ msgid "Control the Model Railway"
 msgstr ""
 
 #, elixir-format
+#: lib/animina_web/live/page_live.html.leex:176
 #: lib/animina_web/templates/user_registration/new.html.eex:154
 msgid "Coupon code"
 msgstr ""
@@ -558,7 +558,7 @@ msgstr ""
 
 #, elixir-format
 #: lib/animina_web/live/components/panels/packages_panel_component.ex:17
-#: lib/animina_web/live/components/panels/packages_panel_component.ex:141
+#: lib/animina_web/live/components/panels/packages_panel_component.ex:141 lib/animina_web/live/page_live.html.leex:178
 msgid "Invite your friends and receive 100 points for every new user who redeems the 100 points coupon code %{coupon}."
 msgstr ""
 
@@ -568,17 +568,17 @@ msgid "Logged in users find a different answer here."
 msgstr ""
 
 #, elixir-format
-#: lib/animina_web/live/components/panels/active_slot_panel_component.ex:110
+#: lib/animina_web/live/components/panels/active_slot_panel_component.ex:149
 msgid "Minutes"
 msgstr ""
 
 #, elixir-format
-#: lib/animina_web/live/components/panels/active_slot_panel_component.ex:83
-msgid "Next available destinations"
+#: lib/animina_web/live/components/panels/active_slot_panel_component.ex:107
+msgid "Possible destinations"
 msgstr ""
 
 #, elixir-format
-#: lib/animina_web/live/components/panels/active_slot_panel_component.ex:75
+#: lib/animina_web/live/components/panels/active_slot_panel_component.ex:98
 msgid "No route available."
 msgstr ""
 
@@ -593,7 +593,7 @@ msgid "Play together with up to %{players} of your friends."
 msgstr ""
 
 #, elixir-format
-#: lib/animina_web/live/components/panels/active_slot_panel_component.ex:114
+#: lib/animina_web/live/components/panels/active_slot_panel_component.ex:153
 msgid "Seconds"
 msgstr ""
 
@@ -608,27 +608,27 @@ msgid "Stefan Wintermeyer. Google me if you are curious."
 msgstr ""
 
 #, elixir-format
-#: lib/animina_web/live/page_live.html.leex:223
+#: lib/animina_web/live/page_live.html.leex:163
 msgid "The detailed track plan of our Märklin model railway. There is a total of 3 locomotives and 10 stopping places."
 msgstr ""
 
 #, elixir-format
-#: lib/animina_web/live/components/panels/active_slot_panel_component.ex:66
+#: lib/animina_web/live/components/panels/active_slot_panel_component.ex:89
 msgid "This train is moving or about to move. Please check the video stream."
 msgstr ""
 
 #, elixir-format
-#: lib/animina_web/live/components/panels/users_list_panel_component.ex:25
+#: lib/animina_web/live/components/panels/users_list_panel_component.ex:27
 msgid "Top Users"
 msgstr ""
 
 #, elixir-format
-#: lib/animina_web/live/page_live.html.leex:217
+#: lib/animina_web/live/page_live.html.leex:157
 msgid "Trackplan"
 msgstr ""
 
 #, elixir-format
-#: lib/animina_web/live/components/panels/users_list_panel_component.ex:45
+#: lib/animina_web/live/components/panels/users_list_panel_component.ex:47
 msgid "View"
 msgstr ""
 
@@ -700,4 +700,15 @@ msgstr ""
 #, elixir-format
 #: lib/animina_web/live/page_live.html.leex:100
 msgid "Why are the cameras not always in 100% sync?"
+msgstr ""
+
+#, elixir-format
+#: lib/animina_web/live/page_live.html.leex:173
+msgid "Coupon Code"
+msgstr ""
+
+#, elixir-format
+#: lib/animina_web/live/components/panels/active_slot_panel_component.ex:112
+#: lib/animina_web/live/components/panels/active_slot_panel_component.ex:121
+msgid "Trainstation"
 msgstr ""

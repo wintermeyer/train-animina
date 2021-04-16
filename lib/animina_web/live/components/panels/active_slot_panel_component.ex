@@ -44,6 +44,22 @@ defmodule AniminaWeb.ActiveSlotPanelComponent do
     end
   end
 
+  def destination(route) do
+    String.split(route.name, "-> ")
+    |> Enum.reverse
+    |> hd()
+  end
+
+  def goes_to_destination?(route, destination) do
+    destination(route)
+    |> String.contains?(destination)
+  end
+
+  def filter_for_destination(routes, destination) do
+    Enum.filter(routes, fn x -> goes_to_destination?(x, destination) end)
+    |> Enum.sort_by(&destination/1)
+  end
+
   def render(assigns) do
     ~L"""
     <%= with_locale(@locale, fn -> %>
@@ -85,18 +101,34 @@ defmodule AniminaWeb.ActiveSlotPanelComponent do
                             </div>
                           <% else %>
                             <div class=" md:block">
+
                               <div>
-                                <p class="text-sm text-gray-900">
-                                  <%= gettext("Next available destinations") %>:
+                                <p class="text-base font-medium text-gray-900">
+                                  <%= gettext("Possible destinations") %>:
                                 </p>
+
                                 <div class="pt-4 space-y-2">
-                                  <%= for route <- available_routes(loco, @track_routes) do %>
-                                    <button phx-click="add_route_to_schedule" phx-value-track_route_id="<%= route.id %>" phx-value-loco_id="<%= loco.id %>" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" do>
-                                      <%= String.split(route.name, " -> ") |> Enum.reverse |> hd()  %>
-                                    </button>
+                                  <%= unless filter_for_destination(available_routes(loco, @track_routes), "NR") == [] do %>
+                                    <p><%= gettext("Trainstation") %> Neuwied (NR)</p>
+                                    <%= for route <- filter_for_destination(available_routes(loco, @track_routes), "NR") do %>
+                                      <button phx-click="add_route_to_schedule" phx-value-track_route_id="<%= route.id %>" phx-value-loco_id="<%= loco.id %>" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" do>
+                                        <%= String.split(route.name, " -> ") |> Enum.reverse |> hd()  %>
+                                      </button>
+                                    <% end %>
+                                  <% end %>
+
+                                  <%= unless filter_for_destination(available_routes(loco, @track_routes), "KO") == [] do %>
+                                    <p><%= gettext("Trainstation") %> Koblenz (KO)</p>
+                                    <%= for route <- filter_for_destination(available_routes(loco, @track_routes), "KO") do %>
+                                      <button phx-click="add_route_to_schedule" phx-value-track_route_id="<%= route.id %>" phx-value-loco_id="<%= loco.id %>" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" do>
+                                        <%= String.split(route.name, " -> ") |> Enum.reverse |> hd()  %>
+                                      </button>
+                                    <% end %>
                                   <% end %>
                                 </div>
+
                               </div>
+
                             </div>
                           <% end %>
                         <% end %>
