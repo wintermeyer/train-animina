@@ -8,6 +8,8 @@ defmodule AniminaWeb.UsersListPanelComponent do
   def top_users() do
     from(u in User,
       where: not is_nil(u.confirmed_at),
+      # admin and debugging account
+      where: u.username != "wintermeyer",
       where: u.lifetime_points > 0,
       order_by: [desc: :lifetime_points, asc: :confirmed_at],
       limit: 10
