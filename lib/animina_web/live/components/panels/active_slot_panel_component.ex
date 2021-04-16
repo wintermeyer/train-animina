@@ -24,9 +24,16 @@ defmodule AniminaWeb.ActiveSlotPanelComponent do
     package = Animina.Offers.get_package!(slot.package_id)
 
     case package.locos do
-      1 -> Enum.filter(locos, fn x -> Enum.member?(["BR 216 059-6"], x.name) end)
-      2 -> Enum.filter(locos, fn x -> Enum.member?(["BR 216 059-6", "212 097-0 DBG"], x.name) end)
-      _ -> locos
+      1 ->
+        Enum.filter(locos, fn x -> Enum.member?(["BR 216 059-6"], x.name) end)
+
+      2 ->
+        Enum.filter(locos, fn x -> Enum.member?(["BR 216 059-6", "212 097-0 DBG"], x.name) end)
+        # quick and dirty hack to have BR 216 on top of the list
+        |> Enum.reverse()
+
+      _ ->
+        locos
     end
   end
 
